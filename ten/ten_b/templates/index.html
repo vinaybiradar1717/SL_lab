@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Student registration</title>
+</head>
+<body>
+     <form action="{{url_for('index')}}" method="POST" id="f1">
+
+          <h1>enter the details</h1>
+
+          <h3>{{msg}}</h3>
+          <br><br>
+          USN:
+          <input type="text" required name="usn" >
+          <br>
+          DOB:
+          <input type="date" required>
+          <br>
+          <br>
+          Marks:
+          <br>SUB1:
+          <input type="number" required min='0' name="m1">
+          <br>
+          SUB2:
+          <input type="number" required min='0' name="m2">
+          <br>
+          SUB3:
+          <input type="number" required min='0' name="m3">
+
+          <input type="submit" >
+
+
+
+
+     </form>
+     
+</body>
+</html>

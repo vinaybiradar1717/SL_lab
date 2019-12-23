@@ -1,0 +1,61 @@
+<!-- 3a. Create the details (name, native country, story title and publication year) of
+    four authors as a JSON object. Display a web page displaying the details of 
+    • First two authors in a tabular form using HTML Table Tag 
+    • Other two authors as plain text. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Three_A</title>
+</head>
+<body style="margin: 10em 40em; font-size: 22px;">
+    <span id="tableform"></span>
+    <span id="nottable"></span>
+</body>
+    <script>
+        var authors = [
+            {
+                name: "Arjun",
+                country: "India",
+                title: "Gangavati",
+                year: "2014"
+            },
+            {
+                name: "Manav",
+                country: "SriLanka",
+                title: "Kshetra",
+                year: "2018"
+            },
+            {
+                name: "Ashutosh",
+                country: "India",
+                title: "Love of Nature",
+                year: "2011"
+            },
+            {
+                name: "Frank",
+                country: "Spain",
+                title: "Barca",
+                year: "2015"
+            }
+        ]
+
+            document.getElementById("tableform").innerHTML = `
+            <table border>
+            <tr><th>Name</th><th>Country</th><th>Story_Title</th><th>Published_Year</th></tr>
+            <tr><td>${authors[0].name}</td><td>${authors[0].country}</td><td>${authors[0].title}</td><td>${authors[0].year}</td></tr>
+            <tr><td>${authors[1].name}</td><td>${authors[1].country}</td><td>${authors[1].title}</td><td>${authors[1].year}</td></tr>
+            </table>`;
+
+            document.getElementById("nottable").innerHTML = `
+            <h3>Third Person</h3>
+            <p>${authors[2].name}</p><p>${authors[2].country}</p><p>${authors[2].title}</p><p>${authors[2].year}</p><br>
+            <h3>Fourth Person</h3>
+            <p>${authors[3].name}</p><p>${authors[3].country}</p><p>${authors[3].title}</p><p>${authors[3].year}</p>`;
+
+    </script>
+</html>

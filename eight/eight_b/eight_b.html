@@ -1,0 +1,67 @@
+<!-- 8b. JavaScript (JSON): Create two JSON objects. One contains the details of a 
+‘Patient’ as “name”, “AadharNumber” and a JSON array which has the “lab-tests” the patient has taken.
+The other contains the ‘Hospital’ details as “hospital-name” and “location”.
+Create a web page that displays the Hospital details when the page loads along with the text 
+“Patient Details:” On mouse-hover the text “Patient Details:” 
+changes colour and displays the details of the patient stored in the JSON object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital</title>
+    <style>
+        h3:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Name: <h2 id="hospname"></h2></h1>
+    <h1>Hospital Location: <h2 id="hosploc"></h2></h1>
+
+    <h3 onmouseover="hello()">Pateint Details</h3>
+    <span id="detail"></span>
+</body>
+<script>
+     hospital =  [
+        {
+            name: "Apollo",
+            location: "Bangalore"
+        }
+    ]
+
+
+     details = [
+        {
+            name: "Abhishek",
+            adhar: 123456,
+            tests: ["test1","test2","test3"]
+        }
+    ]
+
+    document.getElementById("hospname").innerHTML = hospital[0].name;
+    document.getElementById("hosploc").innerHTML = hospital[0].location;
+
+    function hello(){
+        document.getElementById("detail").innerHTML = 
+        ` <table border>
+            <tr>
+                <th>Name</th>
+                <th>Adhar</th>
+                <th>Tests</th>
+            </tr>
+            <tr>
+                <td>${details[0].name}</td>
+                <td>${details[0].adhar}</td>
+                <td>${details[0].tests}</td>
+            </tr>
+         </table>
+        `;
+    }
+
+
+</script>
+</html>

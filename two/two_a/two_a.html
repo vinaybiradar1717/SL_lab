@@ -1,0 +1,58 @@
+<!-- 2a. Create a front end that allows the user to enter details of the item purchased 
+     (item name, item price (option), number of items bought). 
+     On clicking of the submit button, the total cost for the item purchased should be calculated and displayed. 
+     On clicking on the ‘paid’ button, appropriate alert box should be popped up. -->
+
+     <html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>cart</title>
+     </head>
+     <body>
+          <h2>enter the details of item</h2>
+          <label>item mane</label>
+          <input type="text" id="n">
+          <label >price</label>
+          <input type="number" id="price">
+          <label >quantity</label>
+          <input type="number" id="quan">
+          <!-- <input type="submit" onclick="my();"> -->
+          <br>
+          <button onclick="my();">click</button>
+
+     <h3>total bill:</h3><span id="o1"></span>
+     
+	<button   onclick="paid();" id="b2" >paid</button>
+     </body>
+     <script>
+              var  item=[];
+          function my(){
+          
+          
+            console.log("hello");
+            var na= document.getElementById("n").value;
+             var pri=document.getElementById("price").value;
+             var qua=document.getElementById("quan").value;
+	document.getElementById("o1").innerHTML=parseInt(pri)*parseInt(qua)
+
+             console.log(na,pri,qua);
+             item.push(pri);
+
+             console.log(item)
+           
+
+             
+
+
+     
+          }
+	function paid(){
+          
+		alert("you paid");
+}
+    
+     
+     </script>
+     </html>
